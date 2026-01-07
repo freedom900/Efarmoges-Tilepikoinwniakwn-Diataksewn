@@ -12,6 +12,12 @@ The idea originated from the frequent overcrowding on popular bus routes where p
 Each bus is represented by an Arduino which collects the motion sensor data and sends them to a central Arduino. There are two motion sensors in each bus entrance and depending on which one is triggered first, the system can determine whether the passenger is entering or exiting the bus.
 
 The central Arduino is connected to a laptop via USB. The data is then parsed by a Python script, which processes and visualises them through a graphical user interface. Using PyQt we recreated a simplified version of our local bus app and modified it to display the real-time data collected.
+The currect bus occupancy is represented by changing the bus icon color in the bus location tab. 
+- **Green** 0-25%
+- **Yellow** 25-50%
+- **Orange** 50-75%
+- **Red** 75-100%
+- **Puprle** 100+%
 
 ## Running the project
 1. Connect the central Arduino to the laptop
